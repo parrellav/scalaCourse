@@ -11,14 +11,15 @@ object Main {
     }
   }
 
-  def isEdge(c: Int, r: Int): Boolean = {
-    if(c == 0 || r==c) true else false
-  }
-
   /**
    * Exercise 1
    */
   def pascal(c: Int, r: Int): Int = {
+
+    def isEdge(c: Int, r: Int): Boolean = {
+      return (c == 0 || r==c)
+    }
+
     if(isEdge(c, r)) 1 else pascal(c-1, r-1) + pascal(c, r-1)
   }
 
