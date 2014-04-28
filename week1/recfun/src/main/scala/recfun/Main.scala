@@ -11,8 +11,9 @@ object Main {
     }
   }
 
-  def isEdge(c: Int, r: Int) =
-    if(c == 0 || r ==c) true else false
+  def isEdge(c: Int, r: Int): Boolean = {
+    if(c == 0 || r==c) true else false
+  }
 
   /**
    * Exercise 1

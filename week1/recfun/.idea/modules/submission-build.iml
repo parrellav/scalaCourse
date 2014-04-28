@@ -21,7 +21,6 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.scalastyle/scalastyle_2.9.2/jars/scalastyle_2.9.2-0.3.2.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.9.2/org.scala-sbt/sbt/0.12.4/completion-0.12.4.jar!/" />
-          <root url="file://$MODULE_DIR$/../../project/target/scala-2.9.2/sbt-0.12/classes" />
           <root url="jar://$USER_HOME$/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.4.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.9.2/org.scala-sbt/sbt/0.12.4/actions-0.12.4.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.9.2/org.scala-sbt/sbt/0.12.4/collections-0.12.4.jar!/" />
@@ -31,6 +30,7 @@
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.9.2/lib/jline.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.9.2/org.scala-sbt/sbt/0.12.4/ivy-2.3.0-rc1.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/net.databinder/dispatch-futures_2.9.2/jars/dispatch-futures_2.9.2-0.8.8.jar!/" />
+          <root url="file://$MODULE_DIR$/../../project/target/scala-2.9.2/sbt-0.12/classes" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.scalariform/scalariform_2.9.2/jars/scalariform_2.9.2-0.1.4.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.9.2/org.scala-sbt/sbt/0.12.4/launcher-interface-0.12.4.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.9.2/org.scala-sbt/sbt/0.12.4/ivy-0.12.4.jar!/" />
