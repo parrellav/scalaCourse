@@ -3,15 +3,16 @@ import common._
 
 object Main {
   def main(args: Array[String]) {
-//    println("Pascal's Triangle")
-//    for (row <- 0 to 10) {
-//      for (col <- 0 to row)
-//        print(pascal(col, row) + " ")
-//      println()
-//    }
+    //    println("Pascal's Triangle")
+    //    for (row <- 0 to 10) {
+    //      for (col <- 0 to row)
+    //        print(pascal(col, row) + " ")
+    //      println()
+    //    }
     println("Exercise 2")
     val justAnExample = "(just an) example"
-    print(justAnExample + " is " + balance(justAnExample.toList))
+    val isBalanced = if(balance(justAnExample.toList)) " is balanced" else " is not balanced"
+    print(justAnExample + isBalanced)
     println()
   }
 
@@ -21,7 +22,7 @@ object Main {
   def pascal(c: Int, r: Int): Int = {
 
     def isEdge(c: Int, r: Int): Boolean = {
-      return (c == 0 || r==c)
+      c == 0 || r==c
     }
 
     if(isEdge(c, r)) 1 else pascal(c-1, r-1) + pascal(c, r-1)
@@ -33,27 +34,29 @@ object Main {
   def balance(chars: List[Char]): Boolean = {
 
     def isOpenParen(c: Char): Boolean = {
-      return c == "(".getBytes()
+      c == "(".charAt(0)
     }
 
     def isCloseParen(c: Char): Boolean = {
-      return c == ")".getBytes()
+      c == ")".charAt(0)
     }
 
-    def countParens(chars: List[Char], accumulator: Int) {
+    def countParens(chars: List[Char], accumulator: Int): Int = {
       if(chars.isEmpty) {
-        return true
+        accumulator
       }
-      else if (chars.head == "(".charAt(0)) {
+      else if (isOpenParen(chars.head)) {
         countParens(chars.tail, accumulator+1)
       }
-      else if (chars.head == ")".charAt(0)) {
+      else if (isCloseParen(chars.head)) {
         countParens(chars.tail, accumulator-1)
       }
-      countParens(chars.tail, accumulator)
+      else {
+        countParens(chars.tail, accumulator)
+      }
     }
-    return (countParens(chars, 0) == 0)
 
+    countParens(chars, 0) == 0
   }
 
   /**
