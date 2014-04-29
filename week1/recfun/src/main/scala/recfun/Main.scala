@@ -11,7 +11,9 @@ object Main {
         }
     println("Exercise 2")
     checkBalance("(just an) example")
+    checkBalance("I told him (that it’s not (yet) done). (But he wasn’t listening)")
     checkBalance("())(")
+    checkBalance(":-)")
     checkBalance("()")
     checkBalance("(")
     checkBalance(")")
