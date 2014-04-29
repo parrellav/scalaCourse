@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/lib_managed/srcs/net.databinder.dispatch/dispatch-core_2.10/dispatch-core_2.10-0.11.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_managed/srcs/net.databinder.dispatch/dispatch-core_2.10/dispatch-core_2.10-0.11.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

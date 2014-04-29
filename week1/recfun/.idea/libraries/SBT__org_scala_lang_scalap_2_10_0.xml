@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/lib_managed/srcs/org.scala-lang/scalap/scalap-2.10.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_managed/srcs/org.scala-lang/scalap/scalap-2.10.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

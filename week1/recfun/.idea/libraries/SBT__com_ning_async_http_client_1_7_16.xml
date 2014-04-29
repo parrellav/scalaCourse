@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/lib_managed/srcs/com.ning/async-http-client/async-http-client-1.7.16-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib_managed/srcs/com.ning/async-http-client/async-http-client-1.7.16-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
