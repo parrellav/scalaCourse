@@ -22,6 +22,8 @@ object Main {
     println("Exercise 3")
 
     printChange(4, List(1,2))
+    printChange(2, List(1,2))
+    printChange(15, List(1,6,7))
 
     def printChange(amount: Int, coins: List[Int]) = {
       println("Amount: " + amount)
@@ -73,10 +75,16 @@ object Main {
    */
   def countChange(money: Int, coins: List[Int]): Int = {
 
-    def count(money: Int, coins: List[Int], times: Int): Int = {
-      if (coins.isEmpty) return times
-      if(money % coins.head == 0) count(money, coins.tail, times + 1)
-      else times
+    def count(money: Int, coins: List[Int], accumulator: Int): Int = {
+      if(money == 0) 1
+      else if(money < 0 || coins.isEmpty) {
+        0
+      }
+      else {
+        val currentCoin = count(money-coins.head, coins, accumulator)
+        val nextCoin = count(money, coins.tail, accumulator + 1)
+        currentCoin + nextCoin
+      }
     }
     count(money, coins, 0)
   }
