@@ -9,31 +9,6 @@ object Main {
         print(pascal(col, row) + " ")
       println()
     }
-
-    println("Exercise 2")
-    checkBalance("(just an) example")
-    checkBalance("I told him (that it’s not (yet) done). (But he wasn’t listening)")
-    checkBalance("())(")
-    checkBalance(":-)")
-    checkBalance("()")
-    checkBalance("(")
-    checkBalance(")")
-    checkBalance("()(())")
-
-    println("Exercise 3")
-    printChange(4, List(1,2))
-    printChange(2, List(1,2))
-    printChange(15, List(1,6,7))
-
-    def printChange(amount: Int, coins: List[Int]) = {
-      println("Amount: " + amount)
-      println("Coins: " + coins)
-      println("Change combinations: " + countChange(amount, coins))
-    }
-
-    def checkBalance(s: String) = {
-      println(s + (if(balance(s.toList)) " is balanced" else " is not balanced"))
-    }
   }
 
   /**
