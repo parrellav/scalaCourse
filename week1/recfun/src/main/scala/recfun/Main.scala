@@ -1,26 +1,26 @@
 package recfun
-import common._
 
 object Main {
   def main(args: Array[String]) {
-//        println("Pascal's Triangle")
-//        for (row <- 0 to 10) {
-//          for (col <- 0 to row)
-//            print(pascal(col, row) + " ")
-//          println()
-//        }
-//    println("Exercise 2")
-//    checkBalance("(just an) example")
-//    checkBalance("I told him (that it’s not (yet) done). (But he wasn’t listening)")
-//    checkBalance("())(")
-//    checkBalance(":-)")
-//    checkBalance("()")
-//    checkBalance("(")
-//    checkBalance(")")
-//    checkBalance("()(())")
+
+    println("Pascal's Triangle")
+    for (row <- 0 to 10) {
+      for (col <- 0 to row)
+        print(pascal(col, row) + " ")
+      println()
+    }
+
+    println("Exercise 2")
+    checkBalance("(just an) example")
+    checkBalance("I told him (that it’s not (yet) done). (But he wasn’t listening)")
+    checkBalance("())(")
+    checkBalance(":-)")
+    checkBalance("()")
+    checkBalance("(")
+    checkBalance(")")
+    checkBalance("()(())")
 
     println("Exercise 3")
-
     printChange(4, List(1,2))
     printChange(2, List(1,2))
     printChange(15, List(1,6,7))
@@ -86,6 +86,6 @@ object Main {
         currentCoin + nextCoin
       }
     }
-    count(money, coins, 0)
+    count(money, coins.sorted, 0)
   }
 }
