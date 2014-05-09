@@ -117,4 +117,12 @@ class FunSetSuite extends FunSuite {
       assert(!contains(s, 2), "Intersection 2")
     }
   }
+
+  test("difference contains the differing elements of two sets") {
+    new TestSets{
+      val s = diff(s1, s2)
+      assert(contains(s, 1), "Difference 1")
+      assert(!contains(s, 2), "Difference 2")
+    }
+  }
 }
