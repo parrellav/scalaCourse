@@ -125,4 +125,18 @@ class FunSetSuite extends FunSuite {
       assert(!contains(s, 2), "Difference 2")
     }
   }
+
+  test("forall test") {
+    new TestSets {
+      assert(forall(s1, s1))
+      assert(!forall(s1, s2))
+    }
+  }
+
+  test("mapping test") {
+    new TestSets {
+      val s = map(s1, x => x*3)
+      assert(forall(s, s3))
+    }
+  }
 }
