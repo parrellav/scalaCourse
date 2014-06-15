@@ -101,7 +101,12 @@ object Anagrams {
    *  Note: the resulting value is an occurrence - meaning it is sorted
    *  and has no zero-entries.
    */
-  def subtract(x: Occurrences, y: Occurrences): Occurrences = ???
+  def subtract(x: Occurrences, y: Occurrences): Occurrences = {
+    y.foldLeft(x.toMap)((z, i) => i match {
+      case (c, o) =>
+        if (z(c) - o == 0) z - c
+        else z.updated(c, z(c) - o) }).toList.sorted
+  }
 
   /** Returns a list of all anagram sentences of the given sentence.
    *  
@@ -143,6 +148,19 @@ object Anagrams {
    *
    *  Note: There is only one anagram of an empty sentence.
    */
-  def sentenceAnagrams(sentence: Sentence): List[Sentence] = ???
+  def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
+
+    def subSentence(occ: Occurrences): List[Sentence] = {
+      if (occ.isEmpty) List(List())
+      else
+        for {
+          x <- combinations(occ) filter dictionaryByOccurrences.contains
+          y <- dictionaryByOccurrences(x)
+          z <- subSentence(subtract(occ, x))
+        } yield y :: z
+    }
+
+    subSentence(sentenceOccurrences(sentence))
+  }
 
 }
